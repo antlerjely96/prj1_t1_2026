@@ -11,13 +11,13 @@
         //Lay id cua ban ghi can sua
         $id = $_GET["id"];
         //Mo ket noi
-        include_once "../Connections/open.php";
+        include_once "../../Connections/open.php";
         //Viet sql
         $sql = "SELECT * FROM brands WHERE id = '$id'";
         //Chay sql
         $brands = mysqli_query($connection, $sql);
         //Dong ket noi
-        include_once "../Connections/close.php";
+        include_once "../../Connections/close.php";
     ?>
     <form method="POST" action="update.php">
         <?php
