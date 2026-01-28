@@ -28,6 +28,7 @@
             <th>Brand</th>
             <th></th>
             <th></th>
+            <th></th>
         </tr>
         <?php
             //Hien thi
@@ -63,6 +64,9 @@
                 </td>
                 <td>
                     <a href="destroy.php?id=<?php echo $product['id']; ?>">Delete</a>
+                </td>
+                <td>
+                    <a href="../Carts/addToCart.php?id=<?php echo $product['id']; ?>">Add to cart</a>
                 </td>
             </tr>
         <?php
