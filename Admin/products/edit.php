@@ -6,6 +6,10 @@
     <title>Document</title>
 </head>
 <body>
+    <?php
+        include_once "../../Layouts/header.php";
+        include_once "../../Layouts/menu.php";
+    ?>
     <h3>Update product</h3>
     <?php
         //Lay id tu url
@@ -17,13 +21,14 @@
         //Chay SQL
         $products = mysqli_query($connection, $sql);
     ?>
-    <form method="POST" action="update.php">
+    <form method="POST" action="update.php" enctype="multipart/form-data">
         <?php
             //Hien thi
             foreach ($products as $product) {
         ?>
             <input type="hidden" name="id" value="<?php echo $product['id']; ?>">
             Name: <input type="text" name="name" value="<?php echo $product['name']?>"><br>
+            Image: <input type="file" name="image" value="<?php echo $product['image']?>"><br>
             Price: <input type="text" name="price" value="<?php echo $product['price']?>"><br>
             Quantity: <input type="text" name="quantity" value="<?php echo $product['quantity']?>"><br>
             Locked: <input type="radio" name="locked" value="0" checked> Unlocked
@@ -63,5 +68,8 @@
         ?><br>
         <button>Update</button>
     </form>
+    <?php
+        include_once "../../Layouts/footer.php";
+    ?>
 </body>
 </html>

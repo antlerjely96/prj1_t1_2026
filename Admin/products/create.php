@@ -6,10 +6,15 @@
     <title>Document</title>
 </head>
 <body>
+    <?php
+        include_once "../../Layouts/header.php";
+        include_once "../../Layouts/menu.php";
+    ?>
     <h3>Create product</h3>
-    <form method="POST" action="store.php">
+    <form method="POST" action="store.php" enctype="multipart/form-data">
         Name: <input type="text" name="name"><br>
         Price: <input type="text" name="price"><br>
+        Image: <input type="file" name="image"><br>
         Quantity: <input type="text" name="quantity"><br>
         Locked: <input type="radio" name="locked" value="0"> Unlocked <input type="radio" name="locked" value="1"> Locked <br>
         Brand: <select name="brand_id">
@@ -34,5 +39,8 @@
         </select><br>
         <button>Add</button>
     </form>
+    <?php
+        include_once "../../Layouts/footer.php";
+    ?>
 </body>
 </html>

@@ -81,6 +81,7 @@
                 </td>
             </tr>
         </table>
+        <a href="checkOut.php">Place order</a>
     </form>
 </body>
 </html>
